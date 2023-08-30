@@ -13,7 +13,7 @@ import SignUp from './page/SignUp';
 import Cart from './page/Cart';
 import Success from './page/Success';
 import Cancel from './page/Cancel';
-export const url="http://localhost:8000"
+export const url="https://e-com-p065.onrender.com/"
 
  
 

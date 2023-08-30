@@ -1,5 +1,5 @@
 import { toast } from "react-toastify";
-
+import { url } from "../App";
 const { createSlice, createAsyncThunk } = require("@reduxjs/toolkit");
 
 export const STATUSES = Object.freeze({
@@ -90,7 +90,7 @@ export function fetchProducts() {
   return async function fetchProductThunk(dispatch, getState) {
     dispatch(setStatus(STATUSES.LOADING));
     try {
-      const res = await fetch("http://localhost:8000/getproducts");
+      const res = await fetch( `${url}/getproducts`);
       const product = await res.json();
     //   console.log(product);
       dispatch(setProducts(product));

@@ -29,7 +29,7 @@ function Cart() {
   let handlePayment=async()=>{
     if(user.email){
       let stripePromise=await loadStripe("pk_test_51N3eh3SHNBZiBdpKyytzJvTcbdB1Sl6pV1mkY61hbN78GC8ZiRnvrCUG8PyaclfbB2V34qwMzi7XgFZVtddk7Y4W000yKPhVH8")
-      let res=await fetch("http://localhost:8000/checkout-payment",{
+      let res=await fetch("http://localhost:8080/checkout-payment",{
         method:"post",
         headers:{
           "content-type":"application/json"
