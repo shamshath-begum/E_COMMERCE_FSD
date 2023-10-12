@@ -15,7 +15,7 @@ import Success from './page/Success';
 import Cancel from './page/Cancel';
 export const url="https://e-com-p065.onrender.com/"
 
- 
+// export const url="http://localhost:8080"
 
 function App() {
   return <>
