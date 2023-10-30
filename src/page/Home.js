@@ -1,13 +1,19 @@
-import React, {  useRef } from "react";
-import { useSelector } from "react-redux";
+import React, {  useEffect, useRef } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import HomeCard from "../component/HomeCard";
 import CardItems from "../component/CardItems";
 import { GrPrevious } from "react-icons/gr";
 import { GrNext } from "react-icons/gr";
 
+
 import AllProduct from "../component/AllProduct";
+// import { useDispatch } from "react-redux";
+import { fetchProducts } from "../store/ProductSlice";
+
 
 function Home() {
+const dispatch=useDispatch()
+// dispatch(fetchProducts)
   let products = useSelector((state) => state.product.product);
   // console.log(products);
 
@@ -20,6 +26,10 @@ function Home() {
   );
   // console.log(products_vegetable);
 
+  useEffect(() => {
+    dispatch(fetchProducts());
+    
+}, []);
   const loadingArray = new Array(4).fill(null);
   const loadingArrayFeature = new Array(10).fill(null);
 
