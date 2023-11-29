@@ -114,7 +114,10 @@ const Login = () => {
           <Link to={"/signup"} className="text-red-500 underline">
             Sign Up
           </Link>
-        </p>
+        </p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <p>EMail:sham29.b@gmail.com</p>
+            <p>password:1234</p>
+          
       </div>
     </div>
   );
